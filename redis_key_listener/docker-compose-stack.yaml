@@ -1,0 +1,27 @@
+name: cache-redis-service-stack
+
+services:
+  redis-stack:
+    image: redis/redis-stack:latest
+    container_name: redis-stack
+    restart: always
+    ports:
+      - "6379:6379"  # Redis port
+      - "8001:8001"  # RedisInsight UI
+    environment:
+      REDIS_ARGS: "--save 20 1 --loglevel warning"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    networks:
+      - redis_network
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  redis_network:
+    driver: bridge
+

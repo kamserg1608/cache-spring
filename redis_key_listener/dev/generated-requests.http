@@ -1,0 +1,23 @@
+###
+POST http://localhost:8080/api/users/1
+Content-Type: application/json
+
+{
+  "name": "Test1",
+  "surname": "Test2",
+  "age": 30
+}
+
+###
+POST http://localhost:8080/api/users/2
+Content-Type: application/json
+
+{
+  "name": "Test1",
+  "surname": "Test2",
+  "age": 30
+}
+
+###
+GET http://localhost:8080/api/users/1
+
