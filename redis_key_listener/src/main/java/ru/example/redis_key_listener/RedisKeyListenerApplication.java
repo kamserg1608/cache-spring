@@ -8,9 +8,6 @@ import org.springframework.data.redis.core.RedisKeyValueAdapter;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 
 @SpringBootApplication
-@EnableRedisRepositories(enableKeyspaceEvents = RedisKeyValueAdapter.EnableKeyspaceEvents.ON_DEMAND,
-                         shadowCopy = RedisKeyValueAdapter.ShadowCopy.OFF)
-@EnableCaching
 public class RedisKeyListenerApplication {
 
     public static void main(String[] args) {

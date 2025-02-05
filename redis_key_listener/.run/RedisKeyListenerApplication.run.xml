@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RedisKeyListenerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="ACTIVE_PROFILES" value="redis" />
+    <module name="redis_key_listener" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ru.example.redis_key_listener.RedisKeyListenerApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
